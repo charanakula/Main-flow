@@ -1,0 +1,69 @@
+/* Calculator container */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 10cap;
+  padding: 10px;
+  background-color: #54fad0; /* Light gray background */
+  border-radius: 5px; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Display area */
+.display {
+  background-color: #ffffff; /* Light background for better contrast */
+  padding: 20px;
+  font-size: 24px;
+  text-align: right;
+  color: #333; /* Darker text for better contrast */
+}
+
+/* Button container */
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+/* General button styles */
+.button {
+  padding: 15px;
+  border: none;
+  border-radius: 5px; /* Rounded corners for buttons */
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #bcf151;
+  color: #333; /* Darker text for better contrast */
+  transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+/* Button hover effect */
+.button:hover {
+  background-color: #f2f25b; /* Lighten button on hover */
+}
+
+/* Operation buttons (optional styles) */
+.operation {
+  background-color: #ff4545; /* Light gray for operations */
+}
+
+.operation:hover {
+  background-color: #d0d0d0; /* Slightly darker hover for operation buttons */
+}
+
+/* Active button (optional visual cue for pressed button) */
+.button.active {
+  background-color: #ccc; /* Change color or add a border to indicate press */
+}
+
+/* Optional: Error handling (visual cue for error) */
+.display.error {
+  background-color: #f9f0f0; /* Light red for error messages */
+  color: #900; /* Darker red for error text */
+}
+body{
+  background-color: brown;
+}

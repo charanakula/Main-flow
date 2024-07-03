@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif; /* Specify font family */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Light gray background */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    background-color: #3498db; /* Blue background for header */
+    color: white; /* White text */
+    padding: 20px;
+    display: flex; /* Arrange logo and navigation horizontally */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Align vertically */
+  }
+  
+  .logo {
+    font-size: 1.5em; /* Larger logo font size */
+    font-weight: bold; /* Bold text for logo */
+  }
+  
+  .nav {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove default list style */
+  }
+  
+  .nav li {
+    display: inline-block; /* Display links horizontally */
+    margin-right: 20px;
+  }
+  
+  .nav a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Increase padding around links */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .nav a:hover {
+    background-color: #2980b9; /* Lighter blue on hover */
+  }
+  
+  .main {
+    flex: 1; /* Allow main content to fill remaining space */
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px; /* Spacing between sections */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners for sections */
+    background-color: white; /* White background for content sections */
+  }
+  
+  .hero {
+    text-align: center; /* Center content in hero section */
+    color: #344444; /* Darker text for better contrast */
+  }
+  
+  .hero img {
+    max-width: 100%; /* Responsive image sizing */
+    margin: 10px auto; /* Center image horizontally */
+  }
+  
+  h2, h3 {
+    margin: 0 0 10px 0; /* Margin adjustments for headings */
+  }
+  
+  .features {
+  }
+  

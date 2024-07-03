@@ -1,0 +1,35 @@
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: rgb(104, 219, 43); /* Light green */
+  text-align: center;
+  text-decoration: dashed;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+footer {
+  background-color: green;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+#ftr {
+  color: aliceblue;
+}
+
+p {
+  text-align: center;
+  font-style: italic;
+}

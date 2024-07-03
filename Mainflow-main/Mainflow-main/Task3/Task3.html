@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Webpage</title>
+    <link rel="stylesheet" href="T3style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to My Simple Webpage</h1>
+    </header>
+    <main>
+      <p>This is my third Task.</p>
+      <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <br />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+      <p id="messageOutput"></p>
+    </main>
+    <footer>
+      <p id="ftr">&copy; Task - 3</p>
+    </footer>
+    <script>
+      const form = document.getElementById("myForm");
+      const messageOutput = document.getElementById("messageOutput");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const name = document.getElementById("name").value;
+        const message = document.getElementById("message").value;
+
+        // Basic validation (replace with more robust validation for real applications)
+        if (name.trim() === "" || message.trim() === "") {
+          messageOutput.textContent = "Please fill in all fields.";
+          return; // Exit function if validation fails
+        }
+
+        // Sanitize user input to prevent XSS attacks (example using escapeHTML function)
+        const sanitizedMessage = escapeHTML(message);
+
+        // Update content dynamically (replace with your desired logic)
+        messageOutput.innerHTML = `<b>Hello, ${name}!</b><br /> Your message: ${sanitizedMessage}`;
+      });
+
+      // Function to escape special characters for XSS prevention (replace with a library like DOMPurify for a more comprehensive solution)
+      function escapeHTML(str) {
+        var map = {
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&apos;",
+        };
+        return str.replace(/[&<>"']/g, function (m) {
+          return map[m];
+        });
+      }
+    </script>
+  </body>
+</html>
