@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Interactive Website!</title>
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Website!</h1>
+    <nav id="navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <p>This is a simple webpage with enhanced interactivity using JavaScript.</p>
+    <p>Here you can add more content, like images, lists, or links.</p>
+
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <br>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 My Interactive Website</p>
+  </footer>
+
+  <script>
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  // Basic validation (replace with more sophisticated validation if needed)
+  if (name === '' || email === '' || message === '') {
+    alert('Please fill in all required fields.');
+    return;
+  }
+
+  // Sanitize user input to prevent XSS attacks (basic example)
+  const sanitizedName = name.replace(/<[^>]*>/g, '');
+  const sanitizedEmail = email.replace(/<[^>]*>/g, '');
+  const sanitizedMessage = message.replace(/<[^>]*>/g, '');
+
+  // Simulate sending data (replace with actual logic for sending data)
+  console.log('Sending message:', {
+    name: sanitizedName,
+    email: sanitizedEmail,
+    message: sanitizedMessage,
+  });
+
+  // Clear form after successful submission
+  form.reset();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0; /* Remove default body padding */
+    min-height: 100vh; /* Set minimum height to viewport height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+  }
+  
+  header {
+    background-color:greenyellow;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  main {
+    flex: 1; /* Allow main content to fill remaining space */
+    padding: 20px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: greenyellow;
+  }
+  
